@@ -23,6 +23,9 @@ body {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   box-shadow: 2px 3px 16px -5px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  bottom: 270px;
+  animation: animacion-aparecer 1s forwards;
 }
 
 .cart img {
@@ -40,4 +43,16 @@ body {
   margin-top: 5px;
   color: gray;
   text-align: left;
+}
+
+@keyframes animacion-aparecer {
+  from {
+    opacity: 0;
+    bottom: 200px;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 270px;
+  }
 }
