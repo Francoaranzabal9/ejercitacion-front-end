@@ -18,16 +18,16 @@ body {
   padding: 20px;
   width: 250px;
   border-radius: 3px;
-  border-top: 3px solid rgb(66, 143, 220);
   box-shadow: 2px 3px 16px -5px rgba(0, 0, 0, 0.75);
   position: absolute;
-  animation: animacion-aparecer 1s forwards;
+  animation: animacion-cart 2s forwards;
 }
 
 .cart img {
   width: 70px;
   margin-top: 20px;
   margin-left: 150px;
+  animation: animacion-img 1s alternate infinite;
 }
 
 .cart h1 {
@@ -41,14 +41,26 @@ body {
   text-align: left;
 }
 
-@keyframes animacion-aparecer {
+@keyframes animacion-cart {
   from {
     opacity: 0;
     bottom: 200px;
+    border-top: 3px solid transparent;
   }
 
   to {
     opacity: 1;
     bottom: 270px;
+    border-top: 3px solid rgb(66, 143, 220);
+  }
+}
+
+@keyframes animacion-img {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
   }
 }
